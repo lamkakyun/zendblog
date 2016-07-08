@@ -19,8 +19,4 @@ class IndexController extends AbstractActionController
         return new ViewModel();
     }
 
-
-    public function test() {
-        var_export($_SERVER);
-    }
 }
