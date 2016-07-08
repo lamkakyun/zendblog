@@ -3,6 +3,10 @@
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
  */
+
+// 不显示 deprecated information
+error_reporting(E_ALL & ~E_USER_DEPRECATED);
+
 chdir(dirname(__DIR__));
 
 // Decline static file requests back to the PHP built-in webserver
