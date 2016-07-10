@@ -1,0 +1,25 @@
+<?php
+
+$title = "Add new album";
+
+$this->headTitle($title);
+?>
+
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<?php
+$form->setAttribute('action', $this->url('album', array('action' => 'add')));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+echo '<p>' . $this->formRow($form->get('title')) . '</p>';
+echo '<p>' . $this->formRow($form->get('artist')) . '</p>';
+echo '<p>' . $this->formSubmit($form->get('submit')) . '</p>';
+echo $this->form()->closeTag();
+?>
+
+<?php
+// Alternatively, the process of rendering the form can be simplified by using the bundled formCollection view helper
+//echo $this->formCollection($form);
+?>
