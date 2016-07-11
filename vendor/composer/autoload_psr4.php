@@ -65,4 +65,6 @@ return array(
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
+    'ApplicationTest\\' => array($baseDir . '/module/Application/test'),
+    'AlbumTest\\' => array($baseDir . '/module/Album/test'),
 );
