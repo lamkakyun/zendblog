@@ -1,11 +1,12 @@
 <?php
 return array(
     // This should  be an array of module namespaces used in the application.
-    'modules' => array(
+    'modules'                 => array(
         'Application',
         'Album', // We need to tell the ModuleManager that this new module exists.
         'Blog', // We need to tell the ModuleManager that this new module exists.
-        'Checklist'
+        'Checklist',
+//        'Travel'
     ),
 
     // These are various options for the listeners attached to the ModuleManager
@@ -14,7 +15,7 @@ return array(
         // If a string key is provided, the listener will consider that a module
         // namespace, the value of that key the specific path to that module's
         // Module class.
-        'module_paths' => array(
+        'module_paths'      => array(
             './module',
             './vendor',
         ),
@@ -61,7 +62,7 @@ return array(
     //     ),
     // )
 
-   // Initial configuration with which to seed the ServiceManager.
-   // Should be compatible with Zend\ServiceManager\Config.
-   // 'service_manager' => array(),
+    // Initial configuration with which to seed the ServiceManager.
+    // Should be compatible with Zend\ServiceManager\Config.
+    // 'service_manager' => array(),
 );

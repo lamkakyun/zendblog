@@ -4,7 +4,6 @@ namespace Album\Controller;
 use Album\Form\AlbumForm;
 use Album\Model\Album;
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Helper\ViewModel;
 
 class AlbumController extends AbstractActionController
 {
@@ -15,10 +14,8 @@ class AlbumController extends AbstractActionController
     {
         // return $this->getResponse()->setContent('album list');
 
-        // 为什么用ViewModel就失败呢？
-//        return new ViewModel(array(
-//            'albums' => $this->getAlbumTable()->fetchAll()
-//        ));
+//        echo getcwd();exit;
+
         return array('albums' => $this->getAlbumTable()->fetchAll(),);
     }
 
