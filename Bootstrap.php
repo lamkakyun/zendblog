@@ -6,7 +6,7 @@
  * Time: 5:04 PM
  */
 
-namespace ApplicationTest;
+namespace Test;
 
 use Zend\Loader\AutoloaderFactory;
 use Zend\Mvc\Service\ServiceManagerConfig;

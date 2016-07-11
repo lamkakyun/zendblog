@@ -16,6 +16,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     {
         $this->setApplicationConfig(
             include getcwd() .'/config/application.config.php'
+//            include __DIR__ . '/../../config/module.config.php'
         );
         parent::setUp();
     }
@@ -25,8 +26,8 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->dispatch('/');
         $this->assertResponseStatusCode(200);
 
-        $this->assertModuleName('application');
-        $this->assertControllerName('application_index');
+        $this->assertModuleName('Application');
+        $this->assertControllerName('Application\Controller\Index');
         $this->assertControllerClass('IndexController');
         $this->assertMatchedRouteName('home');
     }
