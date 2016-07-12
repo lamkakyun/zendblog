@@ -3,9 +3,10 @@ return array(
     // This should  be an array of module namespaces used in the application.
     'modules'                 => array(
         'Application',
-        'Album', // We need to tell the ModuleManager that this new module exists.
-        'Blog', // We need to tell the ModuleManager that this new module exists.
-        'Checklist',
+        'BlogPlatform',
+//        'Album', // We need to tell the ModuleManager that this new module exists.
+//        'Blog', // We need to tell the ModuleManager that this new module exists.
+//        'Checklist',
 //        'Travel'
     ),
 

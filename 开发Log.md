@@ -1,3 +1,6 @@
+# 开发日志
+> 我会将自己的开发过程记录在该文件之中
+
 ```
 composer require zendframework/zend-authentication
 composer require zendframework/zend-config
