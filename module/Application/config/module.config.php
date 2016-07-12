@@ -15,8 +15,8 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-//                        'controller' => 'Application\Controller\Index',
-                        'controller' => 'Album\Controller\Album', // 显示album 首页
+                        'controller' => 'Application\Controller\Index',
+//                        'controller' => 'Album\Controller\Album', // 显示album 首页
                         'action'     => 'index',
                     ),
                 ),

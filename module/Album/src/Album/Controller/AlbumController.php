@@ -3,12 +3,17 @@ namespace Album\Controller;
 
 use Album\Form\AlbumForm;
 use Album\Model\Album;
+use Album\Model\AlbumTable;
 use Zend\Mvc\Controller\AbstractActionController;
 
 class AlbumController extends AbstractActionController
 {
-
     protected $albumTable;
+
+    public function __construct(AlbumTable $albumTable)
+    {
+        $this->albumTable = $albumTable;
+    }
 
     public function indexAction()
     {
@@ -44,14 +49,14 @@ class AlbumController extends AbstractActionController
 
     public function editAction()
     {
-        $id = (int) $this->params()->fromRoute('id', 0);
+        $id = (int)$this->params()->fromRoute('id', 0);
         if (!$id) {
             return $this->redirect()->toRoute('album', array('action' => 'add'));
         }
 
         try {
             $album = $this->getAlbumTable()->getAlbum($id);
-        } catch (\Exception $e) {
+        } catch(\Exception $e) {
             return $this->redirect()->toRoute('album', ['action' => 'index']);
         }
 
@@ -79,7 +84,7 @@ class AlbumController extends AbstractActionController
 
     public function deleteAction()
     {
-        $id = (int) $this->params()->fromRoute('id', 0);
+        $id = (int)$this->params()->fromRoute('id', 0);
         if (!$id) {
             return $this->redirect()->toRoute('album');
         }
@@ -90,7 +95,7 @@ class AlbumController extends AbstractActionController
             $del = $request->getPost('del', 'No');
 
             if ($del == 'Yes') {
-                $id = (int) $request->getPost('id');
+                $id = (int)$request->getPost('id');
                 $this->getAlbumTable()->deleteAlbum($id);
             }
 
@@ -99,16 +104,17 @@ class AlbumController extends AbstractActionController
 
         return array(
             'id'    => $id,
-            'album' => $this->getAlbumTable()->getAlbum($id)
+            'album' => $this->getAlbumTable()->getAlbum($id),
         );
     }
 
     public function getAlbumTable()
     {
-        if (! $this->albumTable) {
+        if (!$this->albumTable) {
             $sm = $this->getServiceLocator();
             $this->albumTable = $sm->get('Album\Model\AlbumTable');
         }
+
         return $this->albumTable;
     }
 }

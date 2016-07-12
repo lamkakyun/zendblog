@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="Bootstrap.php" colors="true">
     <testsuites>
-        <testsuite name="ZendSkeletonApplication Test Suite">
+            <testsuite name="ZendSkeletonApplication Test Suite">
             <directory>./module/Application/test</directory>
         </testsuite>
         <testsuite name="Album">
             <directory>./module/Album/test</directory>
+        </testsuite>
+
+        <testsuite name="Blog">
+        <directory>./module/Blog/test</directory>
         </testsuite>
     </testsuites>
 </phpunit>

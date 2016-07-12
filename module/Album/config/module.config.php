@@ -5,10 +5,20 @@ return array(
      * The controllers section provides a list of all the controllers provided by the module.
      */
     'controllers' => array(
-         'invokables' => array(
-             'Album\Controller\Album' => 'Album\Controller\AlbumController',
-         ),
+//         'invokables' => array(
+//             'Album\Controller\Album' => 'Album\Controller\AlbumController',
+//         ),
+
+        'factories' => array(
+            'Album\Controller\Album'  => 'Album\Factory\AlbumControllerFactory'
+        )
      ),
+
+    'service_manager' => array(
+        'factories' => array(
+            'Album\Model\Album' => 'Album\Factory\AlbumTableFactory'
+        )
+    ),
 
     /**
      * This will allow it to find the view scripts for the Album module that are stored in our view/ directory

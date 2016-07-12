@@ -38,6 +38,7 @@ class Bootstrap
             'modules'                 => array(
                 'Application',
                 'Album',
+                'Blog',
             ),
         );
 
