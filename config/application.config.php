@@ -4,10 +4,10 @@ return array(
     'modules'                 => array(
         'Application',
         'BlogPlatform',
+        'Test',
 //        'Album', // We need to tell the ModuleManager that this new module exists.
 //        'Blog', // We need to tell the ModuleManager that this new module exists.
 //        'Checklist',
-//        'Travel'
     ),
 
     // These are various options for the listeners attached to the ModuleManager
