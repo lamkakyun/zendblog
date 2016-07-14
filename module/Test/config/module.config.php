@@ -39,4 +39,29 @@ return array(
         ],
     ],
 
+    'console' => array(
+        'router' => array(
+            'routes' => array(
+                'user-reset-password' => array(
+                    'options' => array(
+                        'route'    => 'user resetpassword [--verbose|-v] <userEmail>',
+                        'defaults' => array(
+                            'controller' => 'Test\Controller\Index',
+                            'action'     => 'resetpassword'
+                        )
+                    )
+                ),
+                'prompt' => array(
+                    'options' => array(
+                        'route' => 'prompt [-v|--verbose] <userEmail> <name>',
+                        'defaults' => array(
+                            'controller' => 'Test\Controller\Index',
+                            'action'     => 'prompt'
+                        )
+                    )
+                )
+            )
+        )
+    )
+
 );
