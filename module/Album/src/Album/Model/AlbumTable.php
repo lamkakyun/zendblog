@@ -15,6 +15,8 @@ class AlbumTable {
 
     public function __construct(TableGateway $tableGateway) {
         $this->tableGateway = $tableGateway;
+//        echo '<pre>';
+//        var_dump($tableGateway->select()->toArray());exit;
     }
 
     public function fetchAll() {

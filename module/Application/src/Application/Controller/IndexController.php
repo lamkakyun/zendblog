@@ -10,6 +10,7 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\Text\Figlet\Figlet;
 use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
@@ -19,4 +20,8 @@ class IndexController extends AbstractActionController
         return new ViewModel();
     }
 
+    // http://zendblog.test.com/application/index/tests
+    public function testAction() {
+        exit;
+    }
 }

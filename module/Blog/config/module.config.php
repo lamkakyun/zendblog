@@ -163,21 +163,21 @@ return [
 
             // Generic routes 通用路由 (前面的路由不再可用, 包括其他模块)
             // http://zendblog.test.com/list
-//            'default' => array(
-//                'type' => 'segment',
-//                'options' => array(
-//                    'route'    => '/[:controller[/:action]]',
-//                    'defaults' => array(
-//                        '__NAMESPACE__' => 'Blog\Controller',
-//                        'controller'    => 'Blog',
-//                        'action'        => 'index',
-//                    ),
-//                    'constraints' => [
-//                        'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-//                        'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-//                    ]
-//                ),
-//            )
+    //            'default' => array(
+    //                'type' => 'segment',
+    //                'options' => array(
+    //                    'route'    => '/[:controller[/:action]]',
+    //                    'defaults' => array(
+    //                        '__NAMESPACE__' => 'Blog\Controller',
+    //                        'controller'    => 'Blog',
+    //                        'action'        => 'index',
+    //                    ),
+    //                    'constraints' => [
+    //                        'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+    //                        'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+    //                    ]
+    //                ),
+    //            )
 
 
             // Using child_routes for more structure
